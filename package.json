@@ -5,23 +5,19 @@
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest",
-		"build-android":
-			"react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && cd android && ./gradlew installDebug",
-		"bundle-android":
-			"react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/",
-		"build-ios":
-			"react-native bundle --platform=ios --dev=false --entry-file 'index.js' --bundle-output './ios/main.jsbundle'",
+		"build-android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && cd android && ./gradlew installDebug",
+		"bundle-android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/",
+		"build-ios": "react-native bundle --platform=ios --dev=false --entry-file 'index.js' --bundle-output './ios/main.jsbundle'",
 		"deloy-android": "code-push release-react tvhieuit/GXX-Android android",
 		"deloy-ios": "code-push release-react tvhieuit/GXX-iOS ios",
-		"clear":
-			"rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json",
+		"clear": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json",
 		"run-ios": "react-native run-ios",
-		"run-android":
-			"adb reverse tcp:8081 tcp:8081 && react-native run-android"
+		"run-android": "adb reverse tcp:8081 tcp:8081 && react-native run-android"
 	},
 	"dependencies": {
 		"react": "16.3.1",
-		"react-native": "0.55.2"
+		"react-native": "0.55.2",
+		"react-native-navigation": "^1.1.440"
 	},
 	"devDependencies": {
 		"babel-jest": "22.4.3",
