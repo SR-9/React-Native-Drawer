@@ -10,5 +10,10 @@ Navigation.startSingleScreenApp({
 		navigatorStyle: {
 			navBarHidden: false
 		}
+	},
+	drawer: {
+		left: {
+			screen: "drawer",
+		  }
 	}
 });
